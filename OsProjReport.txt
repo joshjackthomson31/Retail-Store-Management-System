@@ -1,0 +1,24 @@
+Concepts used:
+I used read and write system calls to read or write a file.
+I used file locking to ensure that 2 persons cannot access the same product. 
+Used socket programming to communicate between client,server and viceversa
+Files used:
+server.h contains definition of all functions in server does
+server.c  Contains implementation of all functions to be done by server
+server_main.c Used to accept clients from clients
+client.h Contains definition of all functions to be done by client
+cilent.c Has implementation of all functions to be done by client
+client_main.c Used to connect to clients
+data.h Contains the structure of product
+data.c Writes initial data to a file
+
+Steps to run:
+First execute data.c to get initial data
+Run server in one terminal using "cc main_server.c server.c" command
+Run clients in any other terminal using "cc main_client.c client.c" command
+For a given person, the options that relate to him will be displayed.
+We can choose any of the options and execute them. 
+
+Logic: Whenever a client needs to communicate with server, I used socket programming. Locks are implemented whenever admin accesses the products. They are also implemented when an user enters payment gateway. When I lock an product, I am updating the file and asking the user for required amount. Payment is succeeded if user pays the required amount is typed and the products requested by user are present in the shop. The one who pays first will get access to the product first.
+
+
